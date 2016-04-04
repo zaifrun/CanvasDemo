@@ -12,18 +12,22 @@ import android.view.View;
 public class MyView extends View{
 	
 	Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.pacman);
-    int pacx = 50;
+    //The coordinates for our dear pacman: (0,0) is the top-left corner
+	int pacx = 50;
     int pacy = 400;
-    int h,w;
+    int h,w; //used for storing our height and width
     
-    public void move(int x)
+    public void moveRight(int x)
     {
     	//still within our boundaries?
     	if (pacx+x+bitmap.getWidth()<w)
     		pacx=pacx+x;
     	invalidate(); //redraw everything
     }
-	
+
+	/* The next 3 constructors are needed for the Android view system,
+	when we have a custom view.
+	 */
 	public MyView(Context context) {
 		super(context);
 		
@@ -38,7 +42,9 @@ public class MyView extends View{
 	{
 		super(context,attrs,defStyleAttr);
 	}
-	
+
+	//In the onDraw we put all our code that should be
+	//drawn whenever we update the screen.
 	@Override
 	protected void onDraw(Canvas canvas) {  
 		//Here we get the height and weight

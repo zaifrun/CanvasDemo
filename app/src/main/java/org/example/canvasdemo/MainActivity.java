@@ -18,11 +18,12 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		Button button = (Button) findViewById(R.id.moveButton);
 		myView = (MyView) findViewById(R.id.gameView);
+		//listener of our pacman
 		button.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				myView.move(10);
+				myView.moveRight(10);
 			}
 		});
 		
