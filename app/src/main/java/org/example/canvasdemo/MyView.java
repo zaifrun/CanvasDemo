@@ -22,7 +22,7 @@ public class MyView extends View{
     	//still within our boundaries?
     	if (pacx+x+bitmap.getWidth()<w)
     		pacx=pacx+x;
-    	invalidate(); //redraw everything
+    	invalidate(); //redraw everything - this ensures onDraw() is called.
     }
 
 	/* The next 3 constructors are needed for the Android view system,
