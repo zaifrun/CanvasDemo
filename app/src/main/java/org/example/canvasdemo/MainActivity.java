@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		Button button = (Button) findViewById(R.id.moveButton);
 		myView = (MyView) findViewById(R.id.gameView);
-		//listener of our pacman
+		//listener of our pacman, when somebody clicks it
 		button.setOnClickListener(new OnClickListener() {
 			
 			@Override
