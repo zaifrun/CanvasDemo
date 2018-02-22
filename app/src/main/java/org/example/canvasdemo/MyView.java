@@ -55,6 +55,7 @@ public class MyView extends View{
 		Paint paint = new Paint();
 		//setting the color
 		paint.setColor(Color.RED);
+		paint.setStrokeWidth(10.0f);
 		canvas.drawColor(Color.WHITE); //clear entire canvas to white color
 		//drawing a line from (0,0) -> (300,200)
 		canvas.drawLine(0,0,300,200,paint);
@@ -65,7 +66,7 @@ public class MyView extends View{
 		paint.setColor(0xff000099);
 		
 		//drawing a circle with radius 20, and center in (100,100) 
-		canvas.drawCircle(100,100,20,paint);
+		canvas.drawCircle(100,100,30,paint);
 		
 		
 		canvas.drawBitmap(bitmap, pacx, pacy, paint);
