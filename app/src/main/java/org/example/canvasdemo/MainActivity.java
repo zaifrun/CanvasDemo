@@ -16,8 +16,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		Button button = (Button) findViewById(R.id.moveButton);
-		myView = (MyView) findViewById(R.id.gameView);
+		Button button = findViewById(R.id.moveButton);
+		myView = findViewById(R.id.gameView);
 		//listener of our pacman, when somebody clicks it
 		button.setOnClickListener(new OnClickListener() {
 			
@@ -44,6 +44,7 @@ public class MainActivity extends Activity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
+			//Do stuff
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
