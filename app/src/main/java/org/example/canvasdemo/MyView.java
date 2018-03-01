@@ -34,6 +34,7 @@ public class MyView extends View{
 	}
 	
 	public MyView(Context context, AttributeSet attrs) {
+
 		super(context,attrs);
 	}
 	
@@ -61,6 +62,7 @@ public class MyView extends View{
 		canvas.drawLine(0,0,300,200,paint);
 		paint.setColor(Color.GREEN);
 		canvas.drawLine(0,200,300,0,paint);
+
 		
 		//setting the color using the format: Transparency, Red, Green, Blue
 		paint.setColor(0xff000099);
